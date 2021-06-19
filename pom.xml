@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.haresh.devops</groupId>
+	<artifactId>etlunit-feature1</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>etlunit-feature1</name>
+	<url>http://com.haresh.devops</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<etlunit.project.version>1.6.9</etlunit.project.version>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+			</activation>
+			<properties>
+				<sonar.host.url>http://build04:9000</sonar.host.url>
+				<sonar.jdbc.url>jdbc:derby://build04:1527/sonar</sonar.jdbc.url>
+				<sonar.jdbc.driver>org.apache.derby.jdbc.ClientDriver</sonar.jdbc.driver>
+				<sonar.jdbc.username>sonar</sonar.jdbc.username>
+				<sonar.jdbc.password>sonar</sonar.jdbc.password>
+			</properties>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.etl-unit</groupId>
+			<artifactId>etlunit-core</artifactId>
+			<version>${etlunit.project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.googlecode.etl-unit</groupId>
+				<artifactId>etlunit-feature-compiler</artifactId>
+				<version>${etlunit.project.version}</version>
+				<executions>
+					<execution>
+						<id>generate-sources</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate-gson-proxies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>
+					<systemPropertyVariables>
+						<projectBuildDirectory>${project.build.directory}</projectBuildDirectory>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

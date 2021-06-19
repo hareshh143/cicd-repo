@@ -1,0 +1,13 @@
+{
+	"type": "object",
+	"properties":
+	{
+		"option":
+		{
+			"type": "string",
+			"required": true
+		}
+	},
+	"extends": "com/haresh/devops/feature1FeatureModule.configuration.validator.jsonSchema",
+	"additionalProperties": false
+}

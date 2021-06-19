@@ -1,0 +1,9 @@
+[INFO.test.test_me.test] Searching for handler for operation: test: {"option":"NiceValue"}
+[INFO.test.test_me.test] Searching for handler for operation: test: {"option":"NiceValue"}
+[INFO.test.test_me.test] Searching for handler for operation: test: {"option":"NiceValue"}
+[INFO.test.test_me.test] Verifying operation request 'test' against the schema
+[INFO.test.test_me.test] Searching for handler for operation: test: {"option":"NiceValue"}
+[INFO.test.test_me.test] Resolved operation type : class com.haresh.devops.TestOperation
+[INFO.test.test_me.test] Resolved operation processor type : interface com.haresh.devops.TestOperationProcessor
+[INFO.test.test_me.test] Using operation processor interface
+[INFO.test] testCompleted(test.test_me, error=null, failures=[], warnings[])

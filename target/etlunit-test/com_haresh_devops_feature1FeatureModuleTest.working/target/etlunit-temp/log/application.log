@@ -1,0 +1,43 @@
+[INFO] Installing feature debug
+[INFO] Installing feature report
+[INFO] Installing feature test
+[INFO] Installing feature directory-based-class-locator
+[INFO] Installing feature context
+[INFO] Installing feature results
+[INFO] Installing feature console
+[INFO] Installing feature run-all-director
+[INFO] Installing feature debug-caller
+[INFO] Installing feature feature1
+[INFO] Initializing feature: annotation-validator
+[INFO] Initializing feature: test
+[INFO] Initializing feature: logging
+[INFO] Initializing feature: debug
+[INFO] Initializing feature: report
+[INFO] Initializing feature: context
+[INFO] Initializing feature: results
+[INFO] Initializing feature: run-all-director
+[INFO] Initializing feature: directory-based-class-locator
+[INFO] Initializing feature: console
+[INFO] Console Status Reporter online
+[INFO] Initializing feature: feature1
+[INFO] Initializing feature: debug-caller
+[INFO] User specified process executor: org.etlunit.LoggingProcessExecutor
+[INFO] User specified process executor: 'org.etlunit.LoggingProcessExecutor' installed
+[INFO] testsStarted(1)
+[INFO] scanStarted
+[INFO] testClassAccepted(test)
+[INFO] testMethodAccepted(test_me)
+[INFO] scanCompleted
+[INFO] testsCompleted()
+[INFO] Disposing feature: annotation-validator
+[INFO] Disposing feature: test
+[INFO] Disposing feature: logging
+[INFO] Disposing feature: debug
+[INFO] Disposing feature: report
+[INFO] Disposing feature: context
+[INFO] Disposing feature: results
+[INFO] Disposing feature: run-all-director
+[INFO] Disposing feature: directory-based-class-locator
+[INFO] Disposing feature: console
+[INFO] Disposing feature: feature1
+[INFO] Disposing feature: debug-caller

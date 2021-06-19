@@ -1,0 +1,70 @@
+<html>
+<head>
+	<style type="text/css">
+		.success {
+			color: green;
+		}
+
+		.error {
+			background: red;
+			color: white;
+		}
+
+		.failure {
+			background: brown;
+			color: white;
+		}
+
+		.warning {
+			background: yellow;
+		}
+
+		.classesDiv {
+		}
+
+		.classTable {
+			width: 100%;
+		}
+
+		.methodName {
+			padding-left: 20px;
+		}
+
+		.status {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		.dasher {
+			border-top: 1px dotted black;
+			height: 1px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.logLink {
+			font-size: smaller;
+		}
+	</style>
+</head>
+<body>
+<a href="../etlunit-temp/log/application.log">application log</a>
+
+<div class="classesDiv">
+			<div class="className">test <span class="logLink">[<a
+			href="../etlunit-temp/log/test.txt">log</a>]</span></div>
+		<table class="classTable">
+			<tbody>
+								<tr>
+					<td class="methodName">test_me</td>
+					<td style="width: 100%;">
+						<div class="dasher">&nbsp;</div>
+					</td>
+					<td class="status success"
+							nowrap="true">success </td>
+				</tr>
+												</tbody>
+		</table>
+	</div>
+</body>
+</html>
